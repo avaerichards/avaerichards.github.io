@@ -3,28 +3,362 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ava Richards portfolio — biomedical science student interested in formulation chemistry, medicinal chemistry, and cheminformatics.">
   <title>Ava Richards | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --surface: #fbfbf9;
+      --surface-2: #f1eee8;
+      --text: #25231d;
+      --muted: #6f6d67;
+      --border: #d9d5ce;
+      --accent: #0b6b73;
+      --accent-dark: #084c52;
+      --shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+      --radius: 18px;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7f6f2 0%, #f3f0ea 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 246, 242, 0.95);
+      border-bottom: 1px solid rgba(217, 213, 206, 0.8);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 4rem 0 3rem;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: #dcebea;
+      color: var(--accent-dark);
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.2rem; }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.1rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card,
+    .card,
+    .skill-box,
+    .contact {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card ul,
+    .skill-box ul {
+      margin: 0.7rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    section {
+      padding: 1.25rem 0 4rem;
+    }
+
+    .section-copy,
+    .muted {
+      color: var(--muted);
+      max-width: 70ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid,
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .tag-row,
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .tag {
+      font-size: 0.84rem;
+      padding: 0.38rem 0.65rem;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .grid,
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Ava Richards</h1>
-  <p>Biomedical science student interested in formulation chemistry, medicinal chemistry, and cheminformatics.</p>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">Ava Richards</div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>Plant MS Classifier</strong> —
-      <a href="https://github.com/avaerichards/plant-ms-classifier" target="_blank" rel="noopener noreferrer">
-        View on GitHub
-      </a>
-    </li>
-  </ul>
+  <main class="container">
+    <section class="hero" id="top">
+      <div>
+        <span class="eyebrow">Biomedical science • chemistry • machine learning</span>
+        <h1>Aspiring scientist building projects at the intersection of chemistry and data.</h1>
+        <p class="lead">
+          I am Ava Richards, a biomedical science student interested in formulation chemistry,
+          medicinal chemistry, and cheminformatics. I use Python, scientific coursework, and
+          hands-on lab experience to build projects that connect chemical data with practical analysis.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="https://github.com/avaerichards" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
 
-  <h2>Skills</h2>
-  <p>Python, scikit-learn, pandas, Jupyter Notebook, organic chemistry, biochemistry, PCR, gel electrophoresis.</p>
+      <aside class="hero-card">
+        <p class="muted"><strong>Current focus:</strong> scientific computing, chemistry, and research readiness.</p>
+        <ul>
+          <li>Python and Jupyter workflows</li>
+          <li>Machine learning for scientific datasets</li>
+          <li>Biochemistry and chemistry coursework</li>
+          <li>GitHub-based project documentation</li>
+        </ul>
+      </aside>
+    </section>
 
-  <h2>Contact</h2>
-  <p>
-    <a href="https://github.com/avaerichards" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </p>
+    <section id="projects">
+      <h2>Featured projects</h2>
+      <p class="section-copy">
+        These projects highlight my growing experience in computational analysis, scientific
+        interpretation, and technical communication.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Plant MS Classifier</h3>
+          <p class="muted">
+            A machine learning project classifying plant-derived mass spectra into natural product classes.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">pandas</span>
+            <span class="tag">Mass spectrometry</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/avaerichards/plant-ms-classifier" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Research and lab experience</h3>
+          <p class="muted">
+            Coursework in biochemistry, organic chemistry, and molecular methods with strong emphasis on precision and documentation.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Biochemistry</span>
+            <span class="tag">Organic chemistry</span>
+            <span class="tag">PCR</span>
+            <span class="tag">Scientific communication</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Portfolio in progress</h3>
+          <p class="muted">
+            This site will continue to grow with future projects in cheminformatics, formulation science, and data analysis.
+          </p>
+          <div class="tag-row">
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Professional development</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills and tools</h2>
+      <p class="section-copy">
+        My background combines life science coursework with technical tools that help me analyze data and present results clearly.
+      </p>
+
+      <div class="skills">
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>Jupyter Notebook</li>
+            <li>pandas and NumPy</li>
+            <li>Basic machine learning workflows</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Scientific background</h3>
+          <ul>
+            <li>Biochemistry</li>
+            <li>Organic chemistry</li>
+            <li>Biomedical science coursework</li>
+            <li>Scientific data interpretation</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Professional tools</h3>
+          <ul>
+            <li>GitHub</li>
+            <li>scikit-learn</li>
+            <li>matplotlib</li>
+            <li>Technical writing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="section-copy">
+        I am an undergraduate biomedical science student at BYU-Idaho with a chemistry background and a growing interest in applying computation to scientific questions.
+      </p>
+      <p class="section-copy">
+        My current goals are to build practical project experience and prepare for roles related to formulation, medicinal chemistry, or cheminformatics.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>Contact</h2>
+        <p class="section-copy">
+          The best way to view my work right now is through GitHub and LinkedIn.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/avaerichards" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Built as a GitHub Pages portfolio for academic and professional projects.
+    </div>
+  </footer>
 </body>
 </html>
