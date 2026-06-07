@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ava Richards portfolio — biomedical science student interested in formulation chemistry, medicinal chemistry, and cheminformatics.">
+  <meta name="description" content="Ava Richards portfolio — dedicated researcher building agentic AI systems for drug discovery and innovation.">
   <title>Ava Richards | Portfolio</title>
   <style>
     :root {
@@ -184,6 +184,33 @@
       border: 1px solid var(--border);
     }
 
+    /* Project card header with circle icon */
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #dcebea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .project-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     footer {
       padding: 2rem 0 3rem;
       color: var(--muted);
@@ -215,12 +242,13 @@
   <main class="container">
     <section class="hero" id="top">
       <div>
-        <span class="eyebrow">Biomedical science • chemistry • machine learning</span>
-        <h1>Aspiring scientist building projects at the intersection of chemistry and data.</h1>
+        <span class="eyebrow">Biochemistry • cheminformatics • agentic AI</span>
+        <h1>Dedicated researcher building agentic AI systems for drug discovery and innovation.</h1>
         <p class="lead">
-          I am Ava Richards, a biomedical science student interested in formulation chemistry,
-          medicinal chemistry, and cheminformatics. I use Python, scientific coursework, and
-          hands-on lab experience to build projects that connect chemical data with practical analysis.
+          I am Ava Richards, a biomedical science student focused on enzyme kinetics,
+          medicinal chemistry, and computational analysis. I use Python, mass spectrometry
+          data, and cheminformatics tools to build intelligent agents that connect chemical
+          data to actionable insight in drug discovery.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#projects">View projects</a>
@@ -230,12 +258,12 @@
       </div>
 
       <aside class="hero-card">
-        <p class="muted"><strong>Current focus:</strong> scientific computing, chemistry, and research readiness.</p>
+        <p class="muted"><strong>Current focus:</strong> agentic AI for drug discovery, scientific computing, and research readiness.</p>
         <ul>
-          <li>Python and Jupyter workflows</li>
-          <li>Machine learning for scientific datasets</li>
-          <li>Biochemistry and chemistry coursework</li>
-          <li>GitHub-based project documentation</li>
+          <li>Agent-style workflows for chemical and biological data</li>
+          <li>Machine learning for plant and natural product datasets</li>
+          <li>Biochemistry and medicinal chemistry coursework</li>
+          <li>GitHub-based, reproducible project documentation</li>
         </ul>
       </aside>
     </section>
@@ -243,15 +271,22 @@
     <section id="projects">
       <h2>Featured projects</h2>
       <p class="section-copy">
-        These projects highlight my growing experience in computational analysis, scientific
-        interpretation, and technical communication.
+        These projects highlight my experience in machine learning on chemical data,
+        natural products informatics, and early-stage drug-likeness screening.
       </p>
 
       <div class="grid">
+        <!-- Plant-MS Classifier -->
         <article class="card">
-          <h3>Plant MS Classifier</h3>
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="data/results/confusion_matrix.png" alt="Plant-MS confusion matrix icon">
+            </div>
+            <h3>Plant-MS Classifier</h3>
+          </div>
           <p class="muted">
-            A machine learning project classifying plant-derived mass spectra into natural product classes.
+            A machine learning workflow that classifies plant-derived mass spectra into
+            natural product classes, supporting downstream annotation and discovery.
           </p>
           <div class="tag-row">
             <span class="tag">Python</span>
@@ -264,29 +299,49 @@
           </div>
         </article>
 
+        <!-- Natural Products DB -->
         <article class="card">
-          <h3>Research and lab experience</h3>
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="data/results/descriptor_heatmap.png" alt="Descriptor heatmap icon">
+            </div>
+            <h3>Natural Products DB</h3>
+          </div>
           <p class="muted">
-            Coursework in biochemistry, organic chemistry, and molecular methods with strong emphasis on precision and documentation.
+            A curated natural products database with searchable structure, metadata,
+            and basic analytics to support cheminformatics and lead exploration.
           </p>
           <div class="tag-row">
-            <span class="tag">Biochemistry</span>
-            <span class="tag">Organic chemistry</span>
-            <span class="tag">PCR</span>
-            <span class="tag">Scientific communication</span>
+            <span class="tag">Cheminformatics</span>
+            <span class="tag">RDKit</span>
+            <span class="tag">SQLite / CSV</span>
+            <span class="tag">Data curation</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/avaerichards/natural-products-db" target="_blank" rel="noopener noreferrer">GitHub repo</a>
           </div>
         </article>
 
+        <!-- Drug-Likeness & ADME Screener -->
         <article class="card">
-          <h3>Portfolio in progress</h3>
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="data/results/triage_counts.png" alt="Triage counts icon">
+            </div>
+            <h3>Drug-Likeness & ADME Screener</h3>
+          </div>
           <p class="muted">
-            This site will continue to grow with future projects in cheminformatics, formulation science, and data analysis.
+            A pipeline that computes drug-likeness and simple ADME-relevant properties
+            from molecular structures, helping prioritize compounds for further study.
           </p>
           <div class="tag-row">
-            <span class="tag">GitHub Pages</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Professional development</span>
+            <span class="tag">RDKit</span>
+            <span class="tag">ADME</span>
+            <span class="tag">Drug discovery</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/avaerichards/drug-likeness-adme-screener" target="_blank" rel="noopener noreferrer">GitHub repo</a>
           </div>
         </article>
       </div>
@@ -295,7 +350,8 @@
     <section id="skills">
       <h2>Skills and tools</h2>
       <p class="section-copy">
-        My background combines life science coursework with technical tools that help me analyze data and present results clearly.
+        My background combines biochemistry and medicinal chemistry with computational
+        tools for analyzing, modeling, and communicating scientific data.
       </p>
 
       <div class="skills">
@@ -305,16 +361,16 @@
             <li>Python</li>
             <li>Jupyter Notebook</li>
             <li>pandas and NumPy</li>
-            <li>Basic machine learning workflows</li>
+            <li>Machine learning workflows</li>
           </ul>
         </div>
 
         <div class="skill-box">
           <h3>Scientific background</h3>
           <ul>
-            <li>Biochemistry</li>
-            <li>Organic chemistry</li>
-            <li>Biomedical science coursework</li>
+            <li>Biochemistry and enzyme kinetics</li>
+            <li>Organic and medicinal chemistry</li>
+            <li>Mass spectrometry and assay data</li>
             <li>Scientific data interpretation</li>
           </ul>
         </div>
@@ -323,9 +379,9 @@
           <h3>Professional tools</h3>
           <ul>
             <li>GitHub</li>
-            <li>scikit-learn</li>
-            <li>matplotlib</li>
-            <li>Technical writing</li>
+            <li>RDKit and scikit-learn</li>
+            <li>matplotlib and data visualization</li>
+            <li>Technical and scientific writing</li>
           </ul>
         </div>
       </div>
@@ -334,10 +390,12 @@
     <section id="about">
       <h2>About</h2>
       <p class="section-copy">
-        I am an undergraduate biomedical science student at BYU-Idaho with a chemistry background and a growing interest in applying computation to scientific questions.
+        I am an undergraduate biomedical science student at BYU-Idaho with a biochemistry
+        and chemistry background and a strong interest in agentic AI for scientific problems.[web:19]
       </p>
       <p class="section-copy">
-        My current goals are to build practical project experience and prepare for roles related to formulation, medicinal chemistry, or cheminformatics.
+        My current goals are to build deployable, well-documented projects that apply machine
+        learning and cheminformatics to real datasets in drug discovery and natural products.
       </p>
     </section>
 
@@ -346,6 +404,8 @@
         <h2>Contact</h2>
         <p class="section-copy">
           The best way to view my work right now is through GitHub and LinkedIn.
+          For research or collaboration inquiries, email me at
+          <a href="mailto:avarichards519@gmail.com">avarichards519@gmail.com</a>.
         </p>
         <div class="project-links">
           <a href="https://github.com/avaerichards" target="_blank" rel="noopener noreferrer">GitHub</a>
